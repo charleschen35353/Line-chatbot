@@ -1227,7 +1227,8 @@ public class StageHandler {
 
 			 	replymsg += "@@" + newCoupon.getInvitee();
 				log.info("OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO");
-				log.info(replymsg);
+				log.info(!CouponWarehouse.getInstance().isNewUser(newCoupon.getInviter()));
+				log.info(!CouponWarehouse.getInstance().gotCouponNewUsers(newCoupon.getInviter()));
 				log.info("OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO");
 
 		}
