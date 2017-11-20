@@ -1256,9 +1256,6 @@ public class StageHandler {
 		database.updateUser(currentUser);//update user stage when the stage has been changed
 		return replyms
 	}*/
-<<<<<<< HEAD
-	public String couponHandler(  String text, Users currentUser, SQLDatabaseEngine database) {
-=======
 
 	/**
 	* This is to use to handle the users' input(decide what to reply) when users try to do something related to coupons.
@@ -1269,7 +1266,6 @@ public class StageHandler {
 	* @return String return the reply message that will be sent to users.
 	*/
 	public String couponHandler(   String text, Users currentUser, SQLDatabaseEngine database) {
->>>>>>> c2609945f64df0113a2d260e27ebb99e076c0f56
 		String replymsg = "";
 		//if(CouponWarehouse.getInstance().isCodeValid(currentUser.getID(),text) && !CouponWarehouse.getInstance().checkSelf(currentUser.getID(),text) ){
 		if(CouponWarehouse.getInstance().isCodeValid(text) && !CouponWarehouse.getInstance().checkSelf(currentUser.getID(),text) ){
