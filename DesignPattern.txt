@@ -1,0 +1,31 @@
+COMP 3111 GROUP 8
+
+Design Patterns Used:
+
+1. Mediator Pattern
+
+2. Singleton Pattern
+
+3. Observer Pattern
+
+
+
+Illustration on UML class diagram: (please read with class diagram as included in the smae repository)
+
+1. Mediator
+
+   Look at the center of the class diagram, instead of having multiple classes interacting with each
+   other, we create a stageHandler class which takes control of those classes. It coordinates the 
+   interaction between users and each related classes such as MenuReader, InputChecker, DatabaseEngine,
+   CouponWareHouses and so on. Applying this pattern have eased our maintenance and modification.
+
+2. Singleton
+
+   At the right top corner of our class diagram, to implemented extra feature, we created a CouponWareHouse
+   to manage the flow of user request on the coupon. Since coupons are limited and one-off when issued, therfore
+   we applied singleton pattern to take care of all user-coupon related events. Whenever the user type "friend"
+   to get the code of invitation, the warehouse will issue a code to the user. Later the 
+
+3. Observer
+   
+   As illustrated in 2, we aslo apply obersver parrtern 
