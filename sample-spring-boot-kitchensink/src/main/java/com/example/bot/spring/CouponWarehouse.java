@@ -279,9 +279,17 @@ public class CouponWarehouse{
   * @return whether a user is qualified to get coupon from entering code
   */
   public boolean canGetCouponFromCode(Users user){
+    String a = "";
+    for(String nu:newUids) a += "@@"+ nu;
+    String b = "";
+    for(String nu:existingUids) a += "@@"+ nu;
+    log.info("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+    log.info(a);
+    log.info("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+    log.info(b);
     if (isNewUser(user)){
       log.info("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
-      log.inof("OOOOOOOOOOOOOOOOO")
+      log.info("User is not old");
       log.info("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
       return (!gotCouponNewUsers.contains(user.getID()));
     }
