@@ -280,6 +280,9 @@ public class CouponWarehouse{
   */
   public boolean canGetCouponFromCode(Users user){
     if (isNewUser(user)){
+      log.info("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+      log.inof("OOOOOOOOOOOOOOOOO")
+      log.info("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
       return (!gotCouponNewUsers.contains(user.getID()));
     }
     else return false;
