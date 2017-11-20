@@ -143,7 +143,7 @@ public class StageHandler {
 				replymsg="Please enter reasonable numbers!";
 		}break;
 		case 5:{
-			if( inputChecker.BudgetEditting(text,currentUser,database,"set") ) {
+			if( inputChecker.AgeEditting(text,currentUser,database,"set") ) {
 				replymsg="Please enter your budget:";
 				currentUser.setSubStage(currentUser.getSubStage()+1);
 			}
@@ -151,7 +151,7 @@ public class StageHandler {
 				replymsg="Please enter reasonable numbers!";
 		}break;
 		case 6:{
-			if(inputChecker.AgeEditting(text, currentUser, database, "set")) {
+			if(inputChecker.BudgetEditting(text, currentUser, database, "set")) {
        			replymsg="Your data has been recorded.\nInput anything to conitnue.";
 				//database.pushUser(currentUser);
        			currentUser.setStage("Main");
@@ -341,7 +341,7 @@ public class StageHandler {
 		case -1:{
 			try{
 				currentUser.setSubStage(Integer.parseInt(text));
-				if (currentUser.getSubStage() >=1 && currentUser.getSubStage() <= 6) {
+				if (currentUser.getSubStage() >=1 && currentUser.getSubStage() <= 8) {
 					replymsg= REDIRECT;
 				}
 				else {
