@@ -533,8 +533,8 @@ public class StageHandler {
 			 * Update corresponding user's "diet_plan" table based on his/her information
 			 * */
 			String user_id = currentUser.getID();
-			//double budget = currentUser.getBudget();
-			double budget = 100;
+			double budget = currentUser.getBudget();
+			//double budget = 100;
 			if (database.search_diet_plan(user_id)) {
 				replymsg = "You've already generated a diet plan:\n\n";
 				replymsg += database.display_diet_plan(user_id, budget);
@@ -561,8 +561,8 @@ public class StageHandler {
 			replymsg = "Reminder List:\n";
 			try {
 				String user_id = currentUser.getID();
-				//double budget = currentUser.getBudget();
-				double budget = 100;
+				double budget = currentUser.getBudget();
+				// double budget = 100;
 
 				// Instantiate a Date object
 				Date dNow = new Date();
@@ -836,7 +836,7 @@ public class StageHandler {
 											+ "3 Edit Weight\n"
 											+ "4 Edit Height\n"
 											+ "5 Edit Bodyfat\n"
-											+ "6 Edit Budget"
+											+ "6 Edit Budget\n"
 											// + "6 Edit Exercise Amount\n"
 											// + "7 Edit Calories Consumption\n"
 											// + "8 Edit Carbohydrate Consumption\n"
