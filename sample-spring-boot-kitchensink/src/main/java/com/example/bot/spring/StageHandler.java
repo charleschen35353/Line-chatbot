@@ -1212,7 +1212,7 @@ public class StageHandler {
 		currentUser.setStage("Main");//back to main
 		currentUser.setSubStage(0);
 		database.updateUser(currentUser);//update user stage when the stage has been changed
-		return replymsg;
+		return replyms
 	}*/
 	public String couponHandler(  String text, Users currentUser, SQLDatabaseEngine database) {
 		String replymsg = "";
@@ -1221,14 +1221,14 @@ public class StageHandler {
 			 Coupon newCoupon = CouponWarehouse.getInstance().issueCoupon(currentUser.getID(),text);
 			// if ( ! CouponWarehouse.getInstance().isNewUser(newCoupon.getInviter()) )
 			  replymsg += "@@" + newCoupon.getCoupon();
-			  if(! CouponWarehouse.getInstance().isNewUser(newCoupon.getInviter()) ||
-				   ! CouponWarehouse.getInstance().gotCouponNewUsers(newCoupon.getInviter())) replymsg += "@@"+newCoupon.getInviter();
+			  if( !CouponWarehouse.getInstance().isNewUser(newCoupon.getInviter()) || //check whether inviter can get coupon more
+				    !CouponWarehouse.getInstance().gotCouponNewUsers(newCoupon.getInviter())) replymsg += "@@"+newCoupon.getInviter();
 				else replymsg += "@@" + "-1"; // dummy representation for not sending
 
 			 	replymsg += "@@" + newCoupon.getInvitee();
-				log.info("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+				log.info("OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO");
 				log.info(replymsg);
-				log.info("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+				log.info("OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO");
 
 		}
 		else{
