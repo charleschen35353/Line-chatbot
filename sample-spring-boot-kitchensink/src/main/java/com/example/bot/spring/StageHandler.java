@@ -1214,20 +1214,21 @@ public class StageHandler {
 		database.updateUser(currentUser);//update user stage when the stage has been changed
 		return replymsg;
 	}*/
-	public String couponHandler(   String text, Users currentUser, SQLDatabaseEngine database) {
+	public String couponHandler(  String text, Users currentUser, SQLDatabaseEngine database) {
 		String replymsg = "";
-		if(CouponWarehouse.getInstance().isCodeValid(currentUser.getID(),text) && !CouponWarehouse.getInstance().checkSelf(currentUser.getID(),text) ){
+		//if(CouponWarehouse.getInstance().isCodeValid(currentUser.getID(),text) && !CouponWarehouse.getInstance().checkSelf(currentUser.getID(),text) ){
+		if(CouponWarehouse.getInstance().isCodeValid(text) && !CouponWarehouse.getInstance().checkSelf(currentUser.getID(),text) ){
 			 Coupon newCoupon = CouponWarehouse.getInstance().issueCoupon(currentUser.getID(),text);
 			// if ( ! CouponWarehouse.getInstance().isNewUser(newCoupon.getInviter()) )
 			  replymsg += "@@" + newCoupon.getCoupon();
 			  if(! CouponWarehouse.getInstance().isNewUser(newCoupon.getInviter()) ||
-				 ! CouponWarehouse.getInstance().gotCouponNewUsers(newCoupon.getInviter())) replymsg += "@@"+newCoupon.getInviter();
+				   ! CouponWarehouse.getInstance().gotCouponNewUsers(newCoupon.getInviter())) replymsg += "@@"+newCoupon.getInviter();
 				else replymsg += "@@" + "-1"; // dummy representation for not sending
 
 			 	replymsg += "@@" + newCoupon.getInvitee();
-									log.info("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
-									log.info(replymsg);
-									log.info("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+				log.info("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+				log.info(replymsg);
+				log.info("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
 
 		}
 		else{

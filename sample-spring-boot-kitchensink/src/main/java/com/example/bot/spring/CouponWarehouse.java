@@ -239,6 +239,13 @@ public class CouponWarehouse{
   * @param code Code to check
   * @return The validity of code along with user source
   */
+  public boolean isCodeValid(String code){
+    for(Coupon c : coupons){
+      if(c.getCode().equals(code)) { return true;}
+    }
+    return false;
+  }
+  /*
   public boolean isCodeValid(String invitee,String code){
     for(Coupon c : coupons){
       if(c.getCode().equals(code)) {
@@ -251,7 +258,7 @@ public class CouponWarehouse{
       }
     }
     return false;
-  }
+  }*/
   /**
   * Checks if coupons still remain.
   * @return Remaining coupon numbers
