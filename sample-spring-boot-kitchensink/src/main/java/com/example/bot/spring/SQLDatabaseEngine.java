@@ -45,7 +45,7 @@ public class SQLDatabaseEngine {
 			log.info(e.getMessage());
 		}
 		return UIDs;
-	}
+	}//
 
 	/**
 	* Retrieve users from database.
