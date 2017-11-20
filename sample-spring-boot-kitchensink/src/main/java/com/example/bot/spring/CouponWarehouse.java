@@ -111,7 +111,7 @@ public class CouponWarehouse{
     }
   }
 
-  //Fetch user ids from the database and store
+  //Fetch user ids from the database and store it
   private static void fetchUsers(){
     SQLDatabaseEngine db = new SQLDatabaseEngine();
     existingUids = db.fetchUIDs();
