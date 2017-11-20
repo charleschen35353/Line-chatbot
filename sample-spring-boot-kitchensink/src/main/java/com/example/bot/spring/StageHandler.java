@@ -663,7 +663,7 @@ public class StageHandler {
 			try {
 				if(Integer.parseInt(text) == 1) currentUser.setSubStage(0);
 				else {
-					throw new Exception("Going back to menu");// handle parseInt()'s exception
+					throw new Exception("Going back to menu");// handle parseInt()' exception
 				}
 			}catch(Exception ex) {
 				currentUser.setStage("Main");
