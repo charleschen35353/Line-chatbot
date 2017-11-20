@@ -224,7 +224,7 @@ public class CouponWarehouse{
       if(found){
         coupons.get(i).setInvitee(invitee);
         if( ! gotCouponNewUsers.contains(coupons.get(i).getInviter()) ) couponsRemaining--;
-        gotCouponNewUsers.add(coupons.get(i).getInviter());
+        if(isNewUser(coupons.get(i).getInviter())) gotCouponNewUsers.add(coupons.get(i).getInviter());
         gotCouponNewUsers.add(invitee);
         return coupons.get(i);
       }
@@ -283,18 +283,18 @@ public class CouponWarehouse{
   * @return whether a user is qualified to get coupon from entering code
   */
   public boolean canGetCouponFromCode(Users user){
-    String a = "";
+    /*String a = "";
     for(String nu:newUids) a += "@@"+ nu;
     String b = "";
-    for(String nu:existingUids) a += "@@"+ nu;
+    for(String nu:existingUids) b += "@@"+ nu;
     log.info("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
     log.info(a);
     log.info("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
-    log.info(b);
+    log.info(b);*/
     if (isNewUser(user)){
-      log.info("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+      /*log.info("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
       log.info("User is not old");
-      log.info("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+      log.info("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");*/
       return (!gotCouponNewUsers.contains(user.getID()));
     }
     else return false;
