@@ -2,15 +2,13 @@
 //
 //
 //import static org.assertj.core.api.Assertions.assertThat;
-//
-//
 //import static org.hamcrest.Matchers.containsString;
 //import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 //import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 //import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 //
 //import java.io.InputStream;
-//import java.util.*;
+//import java.util.List;
 //import java.util.concurrent.TimeUnit;
 //
 //import org.junit.Before;
@@ -44,45 +42,31 @@
 //import lombok.NonNull;
 //import lombok.extern.slf4j.Slf4j;
 //
+//
 //@RunWith(SpringRunner.class)
-//@SpringBootTest(classes = { livingHabitCollectorHanldlerTester.class, StageHandler.class })
-//public class livingHabitCollectorHanldlerTester {
-//	//	@Autowired
-//	//	private SQLDatabaseEngine databaseEngine;
-//
+////@SpringBootTest(classes = { KitchenSinkTester.class, DatabaseEngine.class })
+//@SpringBootTest(classes = { CouponWarehouse.class, KitchenSinkControllerTester.class })
+//public class KitchenSinkControllerTester {
 //	@Test
-//	public void testCase0() throws Exception {
+//	public void CouponWarehouseTester() {
+//		KitchenSinkController controller = new KitchenSinkController();
+//		SQLDatabaseEngine db = new SQLDatabaseEngine();
+//		Users user = new Users("test");
 //		boolean thrown = false;
-//		StageHandler stageHandler = new StageHandler();
-//		SQLDatabaseEngine databaseEngine = new SQLDatabaseEngine();
-//		String text = "dummy";
-//		Users currentUser= new Users("test1001","HXH");
-//		databaseEngine.pushUser(currentUser);
-//		String reply = "";
-//		currentUser.setSubStage(0);
-//		reply = stageHandler.livingHabitCollectorHandler("ha", currentUser,databaseEngine);
-//		if(currentUser.getSubStage() == 1) {
-//			reply = stageHandler.livingHabitCollectorHandler("100", currentUser,databaseEngine);//invalid
-//			currentUser.setSubStage(1);
-//			reply = stageHandler.livingHabitCollectorHandler("50", currentUser,databaseEngine);
+//		user.setSubStage(1);
+//		db.pushUser(user);
+//		MessageEvent<TextMessageContent> event = new MessageEvent<TextMessageContent>();
+//		try {
+//			controller.handleTextMessageEvent(event);
+//			
+//
+//		}catch (Exception e) {
+//				thrown = false;
 //		}
-//		else
-//			thrown = true;
-//
 //		assertThat(!thrown).isEqualTo(true);
-//	}	
-//	
-//	@Test
-//	public void testCaseDefault() throws Exception {
-//		boolean thrown = false;
-//		StageHandler stageHandler = new StageHandler();
-//		SQLDatabaseEngine databaseEngine = new SQLDatabaseEngine();
-//		String text = "dummy";
-//		Users currentUser= new Users("test1001","HXH");
-//		databaseEngine.pushUser(currentUser);
-//		String reply = "";
-//		currentUser.setSubStage(3);
-//		reply = stageHandler.livingHabitCollectorHandler("ha", currentUser,databaseEngine);
-//		assertThat(!thrown).isEqualTo(true);
+//		
+//		
 //	}
+//	
 //}
+//

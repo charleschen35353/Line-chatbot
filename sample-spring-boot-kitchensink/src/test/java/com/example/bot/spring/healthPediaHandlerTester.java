@@ -2,15 +2,13 @@
 //
 //
 //import static org.assertj.core.api.Assertions.assertThat;
-//
-//
 //import static org.hamcrest.Matchers.containsString;
 //import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 //import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 //import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 //
 //import java.io.InputStream;
-//import java.util.*;
+//import java.util.List;
 //import java.util.concurrent.TimeUnit;
 //
 //import org.junit.Before;
@@ -44,45 +42,56 @@
 //import lombok.NonNull;
 //import lombok.extern.slf4j.Slf4j;
 //
+//
 //@RunWith(SpringRunner.class)
-//@SpringBootTest(classes = { livingHabitCollectorHanldlerTester.class, StageHandler.class })
-//public class livingHabitCollectorHanldlerTester {
-//	//	@Autowired
-//	//	private SQLDatabaseEngine databaseEngine;
+////@SpringBootTest(classes = { KitchenSinkTester.class, DatabaseEngine.class })
+//@SpringBootTest(classes = { StageHandler.class, healthPediaHandlerTester.class })
+//public class healthPediaHandlerTester {
+////	@Autowired
+////	private StageHandler handler;
 //
 //	@Test
-//	public void testCase0() throws Exception {
+//	public void healthPediaHandlerTest_case0() {
+//		StageHandler handler = new StageHandler();
+//		SQLDatabaseEngine db = new SQLDatabaseEngine();
+//		Users user = new Users("test");
 //		boolean thrown = false;
-//		StageHandler stageHandler = new StageHandler();
-//		SQLDatabaseEngine databaseEngine = new SQLDatabaseEngine();
-//		String text = "dummy";
-//		Users currentUser= new Users("test1001","HXH");
-//		databaseEngine.pushUser(currentUser);
-//		String reply = "";
-//		currentUser.setSubStage(0);
-//		reply = stageHandler.livingHabitCollectorHandler("ha", currentUser,databaseEngine);
-//		if(currentUser.getSubStage() == 1) {
-//			reply = stageHandler.livingHabitCollectorHandler("100", currentUser,databaseEngine);//invalid
-//			currentUser.setSubStage(1);
-//			reply = stageHandler.livingHabitCollectorHandler("50", currentUser,databaseEngine);
-//		}
-//		else
-//			thrown = true;
-//
-//		assertThat(!thrown).isEqualTo(true);
-//	}	
+//		db.pushUser(user);
+//		//case 0
 //	
-//	@Test
-//	public void testCaseDefault() throws Exception {
-//		boolean thrown = false;
-//		StageHandler stageHandler = new StageHandler();
-//		SQLDatabaseEngine databaseEngine = new SQLDatabaseEngine();
-//		String text = "dummy";
-//		Users currentUser= new Users("test1001","HXH");
-//		databaseEngine.pushUser(currentUser);
-//		String reply = "";
-//		currentUser.setSubStage(3);
-//		reply = stageHandler.livingHabitCollectorHandler("ha", currentUser,databaseEngine);
+//		try {
+//			user.setSubStage(-1);
+//			handler.healthPediaHandler("3", user, db);
+//			user.setSubStage(-1);
+//			handler.healthPediaHandler("10", user, db);
+//			user.setSubStage(-1);
+//			handler.healthPediaHandler("test", user, db);
+//			
+//			user.setSubStage(0);
+//			handler.healthPediaHandler("test", user, db);
+//			user.setSubStage(1);
+//			handler.healthPediaHandler("test", user, db);
+//			user.setSubStage(11);
+//			handler.healthPediaHandler("12312312313123", user, db);
+//			user.setSubStage(11);
+//			handler.healthPediaHandler("apple", user, db);
+//
+//			user.setSubStage(21);
+//			handler.healthPediaHandler("1", user, db);
+//			user.setSubStage(21);
+//			handler.healthPediaHandler("2", user, db);
+//			user.setSubStage(21);
+//			handler.healthPediaHandler("abc", user, db);
+//
+//		}catch (Exception e) {
+//			thrown = true;
+//		}
 //		assertThat(!thrown).isEqualTo(true);
 //	}
+//
+//
+//	
 //}
+//
+//
+//		
