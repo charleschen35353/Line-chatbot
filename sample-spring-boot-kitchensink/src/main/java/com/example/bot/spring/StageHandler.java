@@ -745,7 +745,7 @@ public class StageHandler {
 				currentUser.setSubStage(501);}
 		}break;
 		case 510:{
- 				replymsg = "Congratulations that you have finished the quiz!:)\n"
+ 				replymsg = "Congratulations that you have finished the quiz!:)\n"+
  				"reply anything to get the feedback";
  				currentUser.setSubStage(currentUser.getSubStage()+1);
   		}break;
