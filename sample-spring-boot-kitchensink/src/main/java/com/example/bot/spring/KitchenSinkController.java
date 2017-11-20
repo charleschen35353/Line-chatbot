@@ -367,8 +367,12 @@ public class KitchenSinkController {
 	        }
 	}
 		//database.updateUser(currentUser);
-		if(toMultipleUsers(replymsg))
+		if(toMultipleUsers(replymsg)){
+			log.info("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+			log.info(replymsg);
+			log.info("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
 			pushToAll(replymsg);
+		}
 		else
 			this.replyText(replyToken,replymsg);
 
