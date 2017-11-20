@@ -1220,7 +1220,8 @@ public class StageHandler {
 			 Coupon newCoupon = CouponWarehouse.getInstance().issueCoupon(currentUser.getID(),text);
 			// if ( ! CouponWarehouse.getInstance().isNewUser(newCoupon.getInviter()) )
 			  replymsg += "@@" + newCoupon.getCoupon();
-			  if(CouponWarehouse.getInstance().notGotCoupon(newCoupon.getInviter())) replymsg += "@@"+newCoupon.getInviter();
+			  if(! CouponWarehouse.getInstance().isNewUser(newCoupon.getInviter()) ||
+				 ! CouponWarehouse.getInstance().gotCouponNewUsers(newCoupon.getInviter())) replymsg += "@@"+newCoupon.getInviter();
 				else replymsg += "@@" + "-1"; // dummy representation for not sending
 
 			 	replymsg += "@@" + newCoupon.getInvitee();

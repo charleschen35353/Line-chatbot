@@ -324,7 +324,7 @@ public class CouponWarehouse{
   * @param uid User id of String types
   * @return if a user of user id has receieve a coupon
   */
-  public boolean notGotCoupon(String uid){
+  public boolean gotCouponNewUsers(String uid){
     return gotCouponNewUsers.contains(uid);
   }
 
