@@ -368,9 +368,9 @@ public class KitchenSinkController {
 	}
 		//database.updateUser(currentUser);
 		if(toMultipleUsers(replymsg)){
-			log.info("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+			log.info("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
 			log.info(replymsg);
-			log.info("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+			log.info("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
 			pushToAll(replymsg);
 		}
 		else
