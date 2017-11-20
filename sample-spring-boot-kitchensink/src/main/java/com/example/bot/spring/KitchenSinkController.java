@@ -279,18 +279,18 @@ public class KitchenSinkController {
 
 		if(event.getSource().getUserId().equals("U16d4f0da660c593be7cffe7d1208f036") && text.equals("activate") ) {
 			ArrayList<String> usersid= database.findallusers();
-			
 
-			String link = database.searchLink(number);		
-			
+
+			String link = database.searchLink(number);
+
 			number++;
 			if(number > database.countLink()) {
 				number = 0;
 			}
-			
 
-			
-			
+
+
+
 			for (int i=0;i<usersid.size();i++) {
 				pushText(usersid.get(i),("Regular Healthy Tips!: \n"+ link));
 			}
@@ -374,7 +374,7 @@ public class KitchenSinkController {
 				Thread.currentThread().interrupt();
 			}
 		//});
-		//chatbotThread.start();
+		//chatbotThread.start()
 	}
 	/*
 	private static DownloadedContent saveContent(String ext, MessageContentResponse responseBody) {
