@@ -76,6 +76,11 @@ import lombok.extern.slf4j.Slf4j;
 
 import java.net.URI;
 
+/**
+* CouponWarehouse will take charge of checking valid code and issue coupons
+* @version 1.0
+* @since 2017/11/19
+*/
 @Slf4j
 public class CouponWarehouse{
   final private static int NUMOFCOUPONS = 5000;
@@ -284,7 +289,7 @@ public class CouponWarehouse{
   }
   /**
   * Checks whether a user is registered after campaign.
-  * @param usid Id of source user of type String
+  * @param uid Id of source user of type String
   * @return whether a uid is registered after campaign
   */
   public boolean isNewUser(String uid){
@@ -315,7 +320,7 @@ public class CouponWarehouse{
   }
   /**
   * Checks whether a user is requesting a coupon with its own code.
-  * @param usid Id of source user of type String
+  * @param uid Id of source user of type String
   * @param text Code to check
   * @return whether a user is requesting a coupon with its own code
   */
@@ -329,6 +334,7 @@ public class CouponWarehouse{
   }
   /**
   * Checks if the campaign is started.
+  * @return the started sign;
   */
   public static boolean isCampaignStarted(){
     return started;
