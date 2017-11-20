@@ -23,9 +23,12 @@ Illustration on UML class diagram: (please read with class diagram as included i
 
    At the right top corner of our class diagram, to implemented extra feature, we created a CouponWareHouse
    to manage the flow of user request on the coupon. Since coupons are limited and one-off when issued, therfore
-   we applied singleton pattern to take care of all user-coupon related events. Whenever the user type "friend"
-   to get the code of invitation, the warehouse will issue a code to the user. Later the 
+   we applied singleton pattern to take care of all user-coupon related events. The couponWareHouse is a unique
+   and only instance in the whole program.
 
 3. Observer
    
-   As illustrated in 2, we aslo apply obersver parrtern 
+   As illustrated in 2, we aslo apply obersver parrtern to manage the interaction between users and couponWarehouse.
+   Our warehouse will register every single user, and when the campaign event is triggered, our warehouse will notify
+   all users in its list. Also, when a valid code is used by the invitee, our warehouse will also send a coupon  
+   actively to the inviter.
