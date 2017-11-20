@@ -115,6 +115,10 @@ public class CouponWarehouse{
   private static void fetchUsers(){
     SQLDatabaseEngine db = new SQLDatabaseEngine();
     existingUids = db.fetchUIDs();
+    String a = "";
+    for(String nu:existingUids) a += "@@"+ nu;
+    log.info("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+    log.info(a);
   }
 
   // Construct a unique object of CouponWarehouse.

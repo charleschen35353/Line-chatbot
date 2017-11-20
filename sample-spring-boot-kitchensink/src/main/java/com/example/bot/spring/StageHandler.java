@@ -154,7 +154,6 @@ public class StageHandler {
 				//log.info("Stage error.");
 			}
 		}
-
 		database.updateUser(currentUser);//update user stage when the stage has been changed
 		return replymsg;
 	}
@@ -1356,7 +1355,8 @@ public class StageHandler {
 					+ "Please first tell us some of your personal information: type anything to continue";
 			currentUser = new Users(event.getSource().getUserId());
 			database.pushUser(currentUser); // push new user
-			CouponWarehouse.getInstance().register(currentUser);
+			if(CouponWarehouse.isCampaignStarted())
+				CouponWarehouse.getInstance().register(currentUser);
 		}finally {
 			database.updateUser(currentUser);//update user stage when the stage has been changed
 		}
