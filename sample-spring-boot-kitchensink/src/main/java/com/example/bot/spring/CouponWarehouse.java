@@ -145,6 +145,9 @@ public class CouponWarehouse{
     fetchUsers();
     return msg;
   }
+  /**
+  * Set campaign condition to false
+  */
   static public void closeCampaign(){
     started = false;
   }

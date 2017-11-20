@@ -382,7 +382,7 @@ public class KitchenSinkController {
 	private void pushToAll(String replymsg){
 		String[] replyinfo = replymsg.split("@@");
 		String msg = replyinfo[1];
-		for(int i = 2 ; i < replyinfo.length;i++) if(!replyinfo[i].equals("-1")) this.pushText(replyinfo[i],msg); // non null
+		for(int i = 2 ; i < replyinfo.length;i++) if(!replyinfo[i].equals("-1")){this.pushText(replyinfo[i],msg);} // non null
 	}
 
 	static String createUri(String path) {
