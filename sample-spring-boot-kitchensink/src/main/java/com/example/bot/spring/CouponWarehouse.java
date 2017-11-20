@@ -206,6 +206,14 @@ public class CouponWarehouse{
   }
 
   /**
+  * Insert the user to the list indicating that the user is a new user and got coupon already.
+  *@param uid User id of String type
+  */
+  public void insertGotCouponNewUsers(String uid){
+    gotCouponNewUsers.add(uid);
+  }
+
+  /**
   * Cast and Issue a coupon of the given code.
   * @param invitee The asker of the coupon
   * @param code Code of the coupon
@@ -224,7 +232,6 @@ public class CouponWarehouse{
       if(found){
         coupons.get(i).setInvitee(invitee);
         if( ! gotCouponNewUsers.contains(coupons.get(i).getInviter()) ) couponsRemaining--;
-        if(isNewUser(coupons.get(i).getInviter())) gotCouponNewUsers.add(coupons.get(i).getInviter());
         gotCouponNewUsers.add(invitee);
         return coupons.get(i);
       }

@@ -1230,7 +1230,7 @@ public class StageHandler {
 				log.info(Boolean.toString(CouponWarehouse.getInstance().isNewUser(newCoupon.getInviter())));
 				log.info(Boolean.toString(CouponWarehouse.getInstance().gotCouponNewUsers(newCoupon.getInviter())));
 				log.info("OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO");
-
+				if(isNewUser(newCoupon.getInviter())) CouponWarehouse.getInstance().insertGotCouponNewUsers(newCoupon.getInviter());
 		}
 		else{
 			replymsg = "oops! Your code is either invalid or used. (You can not get coupon by the code issued to yourself)";
