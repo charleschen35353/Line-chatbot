@@ -4,6 +4,6 @@ As previous chatbot was developed in older version of Line Message API delopyed 
 
 # Documentation
 
-Please visit here:https://github.com/charleschen35353/Line-chatbot-for-COMP3111/blob/master/Documentations.pdf for user guides and documentations.
+Please visit here: https://github.com/charleschen35353/Line-chatbot-for-COMP3111/blob/master/Documentations.pdf for user guides and documentations.
 
 
