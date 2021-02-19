@@ -94,7 +94,7 @@ public class StageHandler {
 	* @param database Used to access database
 	* @return String return the reply message that will be sent to users.
 	*/
-	public String initStageHandler(   String text, Users currentUser, SQLDatabaseEngine database) {
+	public String initStageHandler( String text, Users currentUser, SQLDatabaseEngine database) {
 		String replymsg = "";
 		switch(currentUser.getSubStage()) {
 		case 0:{
@@ -1450,7 +1450,7 @@ public class StageHandler {
 					+ "Please first tell us some of your personal information: type anything to continue";
 			currentUser = new Users(event.getSource().getUserId());
 			database.pushUser(currentUser); // push new user
-			if(CouponWarehouse.isCampaignStarted())
+            if(CouponWarehouse.isCampaignStarted())
 				CouponWarehouse.getInstance().register(currentUser);
 		}finally {
 			database.updateUser(currentUser);//update user stage when the stage has been changed

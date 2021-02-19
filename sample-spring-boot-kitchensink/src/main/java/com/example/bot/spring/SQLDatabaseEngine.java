@@ -143,10 +143,11 @@ public class SQLDatabaseEngine {
 			//stmt.setString(19,(user).getRegisterTime());
 
 		  result = stmt.execute();
+            log.info("User with id %d successfully created.", user.getID());
 			stmt.close();
 			connection.close();
 		} catch (Exception e) {
-			System.out.println(e);
+			log.info(e);
 		}
 		return result;
 	}
