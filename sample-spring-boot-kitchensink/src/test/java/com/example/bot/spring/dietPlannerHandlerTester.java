@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 //package com.example.bot.spring;
 //
 //
@@ -415,7 +415,7 @@
 //handler.dietPlannerHandler("F", user, db);
 //
 //		
-=======
+
 package com.example.bot.spring;
 
 
@@ -814,4 +814,3 @@ public class dietPlannerHandlerTester {
 
 
 		
->>>>>>> upstream/master

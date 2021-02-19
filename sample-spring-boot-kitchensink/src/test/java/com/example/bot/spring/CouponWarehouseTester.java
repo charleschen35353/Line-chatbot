@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 //package com.example.bot.spring;
 //
 //
@@ -82,9 +81,7 @@
 //	
 //	
 //}
-=======
 package com.example.bot.spring;
-
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.Matchers.containsString;
@@ -147,14 +144,14 @@ public class CouponWarehouseTester {
 			warehouse.getNotifiableObservers("test");
 			warehouse.issueCode("test");
 			warehouse.issueCoupon("test","test");
-			warehouse.isCodeValid("test","test");
+			//warehouse.isCodeValid("test","test");
 			warehouse.couponRemaining();
 			warehouse.isNewUser(user);
 			warehouse.isNewUser("test");
 			warehouse.canGetCouponFromCode(user);
 			warehouse.checkSelf("test","test");
 			warehouse.isCampaignStarted();
-			warehouse.notGotCoupon("test");
+			//warehouse.notGotCoupon("test");
 		}catch (Exception e) {
 				thrown = false;
 		}
@@ -166,4 +163,4 @@ public class CouponWarehouseTester {
 	
 	
 }
->>>>>>> upstream/master
+
