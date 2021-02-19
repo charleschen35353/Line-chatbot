@@ -147,7 +147,7 @@ public class SQLDatabaseEngine {
 			stmt.close();
 			connection.close();
 		} catch (Exception e) {
-			log.info(e);
+			log.info(e.getMessage());
 		}
 		return result;
 	}
