@@ -24,6 +24,6 @@ And enjoy!
 
 # Use cases and Features 
 
-Please visit here: ![alt text](./Documentations.pdf) for user guides and documentations.
+Please visit here: [Intro.pdf](https://github.com/charleschen35353/Line-chatbot/blob/master/Documentations.pdf) for user guides and documentations.
 
 
