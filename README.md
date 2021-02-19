@@ -1,9 +1,29 @@
-# Note
+# Environment
+ 
+ openjdk version "15.0.2" 2021-01-19
 
-As previous chatbot was developed in older version of Line Message API delopyed on Heroku with student accounts, I am currently maintaining the project to make it work on new API and server. This can cause several days.
+ OpenJDK Runtime Environment (build 15.0.2+10)
 
-# Documentation
+ OpenJDK 64-Bit Server VM (build 15.0.2+10, mixed mode, sharing)
+ 
+ Build by Gradle 3.0
+ 
+ Deploy on Heroku Platform 
 
-Please visit here: https://github.com/charleschen35353/Line-chatbot-for-COMP3111/blob/master/Documentations.pdf for user guides and documentations.
+# Instrcution 
+
+Install LINE app here:  https://line.me/en/ 
+
+Scan the following QR code to add chabot to your connections. 
+
+And enjoy!
+
+# Bot QR Code
+
+![alt text](./QR.png)
+
+# Use cases and Features 
+
+Please visit here: ./Documentations.pdf for user guides and documentations.
 
 
