@@ -24,6 +24,6 @@ And enjoy!
 
 # Use cases and Features 
 
-Please visit here: ./Documentations.pdf for user guides and documentations.
+Please visit here: ![alt text](./Documentations.pdf) for user guides and documentations.
 
 
