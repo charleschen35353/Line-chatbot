@@ -831,6 +831,7 @@ public class SQLDatabaseEngine {
 	private Connection getConnection() throws URISyntaxException, SQLException {
 		Connection connection;
 		URI dbUri = new URI(System.getenv("DATABASE_URL"));//postgres://miquptfnfvevna:a02a49ae6a4d8a9cc1c23e36bfc290006499ecf1932e5abc846b1d7d824432fc@ec2-35-171-57-132.compute-1.amazonaws.com:5432/d16fgje06324ak
+
 		String username = dbUri.getUserInfo().split(":")[0];
 		String password = dbUri.getUserInfo().split(":")[1];
 		String dbUrl = "jdbc:postgresql://" + dbUri.getHost() + ':' + dbUri.getPort() + dbUri.getPath() +  "?ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory";
