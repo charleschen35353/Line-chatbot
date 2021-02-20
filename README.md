@@ -18,9 +18,21 @@ Scan the following QR code to add chabot to your connections.
 
 And enjoy!
 
+# Demo
+
+The chatbot works like the following: 
+
+![alt text](.demo1.jpg)
+
+![alt text](.demo2.jpg)
+
+![alt text](.demo3.jpg)
+
+Try more to explore!
+
 # Bot QR Code
 
-![alt text](./QR.png)
+![alt text](./QRcode.png)
 
 # Use cases and Features 
 
