@@ -22,11 +22,11 @@ And enjoy!
 
 The chatbot works like the following: 
 
-![alt text](.demo1.jpg)
+![alt text](./demo1.jpg)
 
-![alt text](.demo2.jpg)
+![alt text](./demo2.jpg)
 
-![alt text](.demo3.jpg)
+![alt text](./demo3.jpg)
 
 Try more to explore!
 
